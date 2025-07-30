@@ -43,7 +43,7 @@ export function ClaudeDesktopConfig() {
       "args": [
         "-y",
         "mcp-remote",
-        "${mcpEndpoint || 'https://your-deployment.vercel.app/api/mcp'}"
+        "${mcpEndpoint || 'https://rolldice-mcpserver.vercel.app/api/mcp'}"
       ]
     }
   }

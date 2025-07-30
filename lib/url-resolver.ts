@@ -1,4 +1,12 @@
 export function resolveApiDomain(): string {
+  // Client-side resolution (when window is available)
+  if (typeof window !== 'undefined') {
+    // Use the current browser location for client-side
+    const { protocol, host } = window.location;
+    return `${protocol}//${host}`;
+  }
+  
+  // Server-side resolution
   // Priority order for external-facing URLs:
   
   // 1. Custom domain from environment variable (for manual override)
